@@ -27,7 +27,7 @@ class Hash(K, V)
     when Array
       object.map { |e| _deep_transform_values_in_object e, &block }
     else
-      yield object
+      object
     end
   end
 

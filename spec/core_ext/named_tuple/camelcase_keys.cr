@@ -16,5 +16,15 @@ describe NamedTuple do
         },
       })
     end
+
+    it "works with arrays" do
+      {
+        foo: [1],
+        bar: ["hi"],
+      }.camelcase_keys.should eq({
+        "Foo" => [1],
+        "Bar" => ["hi"],
+      })
+    end
   end
 end
